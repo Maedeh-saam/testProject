@@ -18,6 +18,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         userName.delegate = self;
     }
 
+    //MARK: enterAction
     @IBAction func enter(_ sender: UIButton) {
         
         if(userName.text != nil){
