@@ -37,11 +37,13 @@ class SecondViewController: UIViewController, IRepoServices {
         RepoServices().GetRepos(userNamePassed, self);
     }
     
+    //fill repository Info
     func repoListReceived(_ result: [RepoModel]) {
         self.receivedData = result;
         self.repositoryList.reloadData();
     }
     
+    //fill profile Info
     func profileReceived(_ result: ProfileModel) {
         
         self.userName.text = result.username;
@@ -54,10 +56,12 @@ class SecondViewController: UIViewController, IRepoServices {
     }
     
     func errorReceived(_ result: String) {
-        
+        print(result);
     }
 
 }
+
+//MARK: TableView Delegate and Data source
 
 extension SecondViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
