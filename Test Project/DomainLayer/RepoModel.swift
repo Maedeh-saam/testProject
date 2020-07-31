@@ -8,7 +8,6 @@
 
 import Foundation
 import ObjectMapper
-//import AlamofireObjectMapper
 
 
 public class RepoModel :  Mappable {
